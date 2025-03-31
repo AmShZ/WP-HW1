@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>محاسبه فرمول‌ها</title>
+    <style>
+        body {
+            font-family: Tahoma, sans-serif;
+            margin: 20px;
+            padding: 0;
+            direction: rtl;
+            text-align: right;
+        }
+        .f-c {
+            margin-bottom: 30px;
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        input[type="text"] {
+            display: block;
+            margin-bottom: 10px;
+            padding: 8px;
+            width: 100%;
+            max-width: 300px;
+            box-sizing: border-box;
+        }
+        formula {
+            display: block;
+            padding: 10px;
+            background: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>محاسبه فرمول‌ها</h1>
+    
+    <div class="f-c">
+        <h2>فرمول 1</h2>
+        <input type="text" id="fee" placeholder="واحد قیمت" />
+        <input type="text" id="cnt" placeholder="تعداد" />
+        <input type="text" id="disc" placeholder="تخفیف" />
+        <formula evaluator="cnt*fee-disc"></formula>
+    </div>
+    
+    <div class="f-c">
+        <h2>فرمول 2</h2>
+        <input type="text" id="prc" placeholder="قیمت" />
+        <input type="text" id="tax" placeholder="مالیات" />
+        <formula evaluator="prc+tax"></formula>
+    </div>
+    
+    <div class="f-c">
+        <h2>فرمول 3</h2>
+        <input type="text" id="bs" placeholder="مقدار پایه" />
+        <input type="text" id="add" placeholder="افزونه" />
+        <formula evaluator="bs+add*2"></formula>
+    </div>
+    
+    <script src="scr.js"></script>
+</body>
+</html>
